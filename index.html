@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,ul,li{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration:none;
+            color:#333;
+        }
+        nav{
+            width:400px;
+            margin:30px auto;
+            border:1px solid;
+            box-shadow:2px 4px 2px 2px rgba(0,0,0,0.5); 
+            background: #f1f1f1;
+        }
+        nav>ul>li{
+            float:left;
+            position: relative;
+        }
+        nav>ul>li:hover .child{
+            display: block;
+        }
+        nav a{
+            display: block;
+            min-width:60px;
+            padding:10px;
+            text-align:center;
+        }
+        nav a:hover{
+            background-color:rgba(0,0,0,0.4);
+            color:#fff;
+        }
+        nav::after{
+            content: "";
+            display: block;
+            clear:both;
+        }
+        .child{
+            position: absolute;
+            top:100%;
+            box-shadow:2px 4px 2px 2px rgba(0,0,0,0.5);
+            display: none;
+        }
+        .child a{
+            width:130px;
+        }
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">作品</a></li>
+            <li>
+                <a href="#">更多</a>
+                <ul class="child">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">知乎</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
